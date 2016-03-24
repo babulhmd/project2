@@ -66,7 +66,7 @@ include "connect.php";
               <th>Phone</th>
               <th>Time</th>
               <th>Edit</th>
-
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -86,6 +86,7 @@ include "connect.php";
                        echo "<td>" . $row["phone"]."</td>";
                        echo "<td>" . $row["time"]."</td>";
                        echo "<td><a href='edit.php?id=". $row["id"] . "'>Edit</a></td>";
+                       echo "<td><a href='delete.php?id=". $row["id"] . "'>Delete</a></td>";
                        echo "</tr>";
 
               }
