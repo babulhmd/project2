@@ -15,16 +15,50 @@ $color = [
   ['name'=>'magenta', 'code'=>'#FF00FF'],
   ['name'=>'brown', 'code'=>'#A52A2A0']
    ];
-   echo "<ol>";
-foreach ($color as $key => $value) {
 
-      echo "<li style='color:".$value['code']."'>".
-      $value['name'].
-      "{".$value['code'].
-        "}" .
-        "</li>";
-
-}
-echo "</ol>";
+//    foreach ($color as $key => $value) {
+//
+//       echo "<li style='color:".$value['code']."'>".
+//       $value['name'].
+//       "{".$value['code'].
+//         "}" .
+//         "</li>";
+//
+// }
+// echo "</ol>";
 
  ?>
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title>Color Table</title>
+   </head>
+   <body>
+     <h1 align="center">Color Table</h1>
+     <table border="1" width="100%">
+       <thead>
+         <tr>
+           <th>ID</th>
+           <th>Name of Color</th>
+           <th>Color Code</th>
+         </tr>
+       </thead>
+       <tbody>
+
+           <?php
+           foreach ($color as $key => $value) {
+             echo "<tr>";
+              echo "<td>".$key."</td>";
+              echo "<td>".$value['name']."</td>";
+              echo "<td>".$value['code']."</td>";
+               echo "</tr>";
+            }
+
+            ?>
+
+       </tbody>
+     </table>
+   </body>
+ </html>
